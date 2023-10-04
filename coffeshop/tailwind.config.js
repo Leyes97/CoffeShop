@@ -18,6 +18,10 @@ module.exports = {
         'paleOrange':'#FDD6BA',
         'lightCream': '#FEFCF7',
         'Grey':'#83888F',
+      },
+      fontFamily:{
+        'barlow':['Barlow'],
+        'fraunces':['Fraunces']
       }
     },
   },

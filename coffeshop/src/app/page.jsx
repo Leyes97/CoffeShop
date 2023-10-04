@@ -1,11 +1,15 @@
-import Image from 'next/image'
+import React from 'react';
+import Navbar from '@/components/Navbar/navbar';
 
-export default function Home() {
+const Home = () => {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-     <div>
-      <p className='text-Grey'>Hola mundo</p>
-     </div>
-    </main>
-  )
-}
+    <div>
+      <Navbar />
+      <main className="flex min-h-screen flex-col items-center justify-between p-24">
+        {/* El contenido de tu página */}
+      </main>
+    </div>
+  );
+};
+
+export default Home;
