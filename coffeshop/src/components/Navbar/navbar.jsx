@@ -17,9 +17,9 @@ const Navbar = () => {
           alt="logo"
         />
         <div className=" font-barlow space-x-3  justify-between text-[12px] gap-[33px] hidden md:flex">
-          <p className="text-Grey cursor-pointer">HOME</p>
-          <p className="text-Grey cursor-pointer">ABOUT US</p>
-          <p className="text-Grey cursor-pointer">CREATE YOUR PLAN</p>
+          <p className="text-Grey cursor-pointer hover:underline">HOME</p>
+          <p className="text-Grey cursor-pointer hover:underline">ABOUT US</p>
+          <p className="text-Grey cursor-pointer hover:underline">CREATE YOUR PLAN</p>
         </div>
         <div className="mr-5 md:hidden">
           {!isOpen ? (
@@ -31,6 +31,7 @@ const Navbar = () => {
               onClick={() => {
                 setIsOpen(!isOpen);
               }}
+              className='cursor-pointer'
             />
           ) : (
             <>
@@ -42,11 +43,12 @@ const Navbar = () => {
                 onClick={() => {
                   setIsOpen(!isOpen);
                 }}
+                className='cursor-pointer'
               />
               <div className="font-fraunces text-[24px] w-full h-full fixed  transform -translate-x-1/2 left-1/2 top-32 gap-[33px] flex flex-col  items-center">
-                <p className=" cursor-pointer">HOME</p>
-                <p className=" cursor-pointer">ABOUT US</p>
-                <p className=" cursor-pointer">CREATE YOUR PLAN</p>
+                <p className=" cursor-pointer hover:underline">HOME</p>
+                <p className=" cursor-pointer hover:underline">ABOUT US</p>
+                <p className=" cursor-pointer hover:underline">CREATE YOUR PLAN</p>
               </div>
             </>
           )}
