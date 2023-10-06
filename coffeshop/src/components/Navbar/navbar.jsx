@@ -66,7 +66,7 @@ const Navbar = () => {
               <div className="font-fraunces text-[24px] w-full h-full fixed  transform -translate-x-1/2 left-1/2 top-32 gap-[33px] flex flex-col  items-center">
                 {links.map(({ label, route }) => (
                   <Link href={route} key={route}>
-                    <p className="text-Grey cursor-pointer hover:underline">
+                    <p className="cursor-pointer hover:underline">
                       {label}
                     </p>
                   </Link>
