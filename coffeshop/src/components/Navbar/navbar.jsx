@@ -4,10 +4,24 @@ import Logo from '../../../public/assets/shared/desktop/logo.svg';
 import burguer from '../../../public/assets/shared/mobile/icon-hamburger.svg';
 import close from '../../../public/assets/shared/mobile/icon-close.svg';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-
+  const links = [
+    {
+      label: 'HOME',
+      route: '/',
+    },
+    {
+      label: 'ABOUT US',
+      route: '/about_us',
+    },
+    {
+      label: 'CREATE YOUR PLAN',
+      route: '/create_your_plan',
+    },
+  ];
   return (
     <nav className="bg-lightCream py-4 fixed w-full">
       <div className="container mx-auto flex justify-between items-center">
@@ -17,9 +31,13 @@ const Navbar = () => {
           alt="logo"
         />
         <div className=" font-barlow space-x-3  justify-between text-[12px] gap-[33px] hidden md:flex">
-          <p className="text-Grey cursor-pointer hover:underline">HOME</p>
-          <p className="text-Grey cursor-pointer hover:underline">ABOUT US</p>
-          <p className="text-Grey cursor-pointer hover:underline">CREATE YOUR PLAN</p>
+          {links.map(({ label, route }) => (
+            <Link href={route} key={route}>
+              <p className="text-Grey cursor-pointer hover:underline">
+                {label}
+              </p>
+            </Link>
+          ))}
         </div>
         <div className="mr-5 md:hidden">
           {!isOpen ? (
@@ -31,7 +49,7 @@ const Navbar = () => {
               onClick={() => {
                 setIsOpen(!isOpen);
               }}
-              className='cursor-pointer'
+              className="cursor-pointer"
             />
           ) : (
             <>
@@ -43,12 +61,16 @@ const Navbar = () => {
                 onClick={() => {
                   setIsOpen(!isOpen);
                 }}
-                className='cursor-pointer'
+                className="cursor-pointer"
               />
               <div className="font-fraunces text-[24px] w-full h-full fixed  transform -translate-x-1/2 left-1/2 top-32 gap-[33px] flex flex-col  items-center">
-                <p className=" cursor-pointer hover:underline">HOME</p>
-                <p className=" cursor-pointer hover:underline">ABOUT US</p>
-                <p className=" cursor-pointer hover:underline">CREATE YOUR PLAN</p>
+                {links.map(({ label, route }) => (
+                  <Link href={route} key={route}>
+                    <p className="text-Grey cursor-pointer hover:underline">
+                      {label}
+                    </p>
+                  </Link>
+                ))}
               </div>
             </>
           )}
