@@ -4,6 +4,7 @@ module.exports = {
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/commons/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
     extend: {
@@ -18,6 +19,8 @@ module.exports = {
         'paleOrange':'#FDD6BA',
         'lightCream': '#FEFCF7',
         'Grey':'#83888F',
+        'CyanWhite':'#66D2CF',
+        'DisableButton':'#E2DEDB',
       },
       fontFamily:{
         'barlow':['Barlow'],
